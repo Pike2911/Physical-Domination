@@ -295,6 +295,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1424418898404888743, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424418898404888743, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3468959642531231620, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
       propertyPath: field of view
       value: 90
@@ -305,11 +313,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5809515301359097779, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
       propertyPath: movementSettings.JumpForce
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5809515301359097779, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
       propertyPath: advancedSettings.airControl
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809515301359097779, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
+      propertyPath: movementSettings.StrafeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809515301359097779, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
+      propertyPath: movementSettings.ForwardSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809515301359097779, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
+      propertyPath: movementSettings.BackwardSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809515301359097779, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
+      propertyPath: movementSettings.RunMultiplier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6595494228314310727, guid: 68f83681ec70ba345a2f52b42c3e6631, type: 3}
       propertyPath: m_Name
