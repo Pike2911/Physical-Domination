@@ -9,21 +9,24 @@ public class physic : MonoBehaviour
     [SerializeField] float t = 0;
     [SerializeField] float s = 0;
 
+    private float z = 0;
+
     private Vector3 Location;
     private void Start()
     {
         Location = transform.position;
+        z = transform.position.x;
     }
     private void Update()
     {
-        t = Time.time;
+        t += Time.deltaTime;
         s = (u + v) / 2.0f * t;
-        Location.x = s;
+        Location.x = z + s;
         transform.position = Location;
+        Debug.Log(s);
         if(t >= 5)
         {
             this.enabled = false;
         }
-        
     }
 }
