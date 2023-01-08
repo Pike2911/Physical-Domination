@@ -5,7 +5,11 @@ using UnityEngine;
 public class Usephone : MonoBehaviour
 {
     [SerializeField] private GameObject phone;
-    
+
+    private void Start()
+    {
+        
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.V))

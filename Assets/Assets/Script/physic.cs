@@ -9,9 +9,15 @@ public class physic : MonoBehaviour
     [SerializeField] float t = 0;
     [SerializeField] float s = 0;
 
+    public float U { get => u; set => u = value; }
+    public float V { get => v; set => v = value; }
+    public float T { get => t; set => t = value; }
+    public float S { get => s; set => s = value; }
+
     private float z = 0;
 
     private Vector3 Location;
+    private bool isPhysicActive = false;
     private void Start()
     {
         Location = transform.position;
@@ -19,14 +25,21 @@ public class physic : MonoBehaviour
     }
     private void Update()
     {
-        t += Time.deltaTime;
-        s = (u + v) / 2.0f * t;
-        Location.x = z + s;
-        transform.position = Location;
-        Debug.Log(s);
-        if(t >= 5)
+        if (isPhysicActive)
         {
-            this.enabled = false;
+            T += Time.deltaTime;
+            S = (U + V) / 2.0f * T;
+            Location.x = z + S;
+            transform.position = Location;
+            Debug.Log(S);
+            if (T >= 5)
+            {
+                this.enabled = false;
+            }
         }
+    }
+    public void Activephysic()
+    {
+        isPhysicActive = true;
     }
 }
