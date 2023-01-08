@@ -28,6 +28,7 @@ public class raycasting : MonoBehaviour
                     GameObject player = GameObject.FindGameObjectWithTag("Player");
                     player.GetComponent<RigidbodyFirstPersonController>().mouseLook.SetCursorLock(false);
                     Time.timeScale = 0;
+                    this.enabled = false;
                 }
             }
         }

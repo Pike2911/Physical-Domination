@@ -18,12 +18,8 @@ public class PhyisicUI : MonoBehaviour
     public void Activatecube()
     {
         Debug.Log("Call Func");
-
         physic physic = activeCube.GetComponent<physic>();
-
-        Debug.Log(textU.text);
         physic.U = float.Parse(textU.text);
-        Debug.Log(textU.text);
 
         activeCube.GetComponent<physic>().Activephysic();
         Time.timeScale = 1.0f;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class physic : MonoBehaviour
 {
-    [SerializeField] float u = 0;
+    [SerializeField] float u = 5;
     [SerializeField] float v = 0;
     [SerializeField] float t = 0;
     [SerializeField] float s = 0;
