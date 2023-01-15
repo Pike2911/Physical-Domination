@@ -12,7 +12,7 @@ public class Phone : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetButtonDown("OpenPhone"))
         {
             if (phone.activeSelf != true)
             {

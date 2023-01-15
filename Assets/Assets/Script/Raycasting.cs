@@ -14,7 +14,7 @@ public class Raycasting : MonoBehaviour
 
         Debug.DrawRay(transform.position, Camera.main.transform.forward * 100, Color.red);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             RaycastHit hit;
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
