@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class opendoor : MonoBehaviour
+public class Autodoor : MonoBehaviour
 {
     [SerializeField] GameObject movingDoor;
 

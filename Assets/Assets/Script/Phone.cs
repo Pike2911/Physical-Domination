@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Usephone : MonoBehaviour
+public class Phone : MonoBehaviour
 {
     [SerializeField] private GameObject phone;
 
