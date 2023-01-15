@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.Events;
 public class Raycasting : MonoBehaviour
 {
+    public GameObjectEvent onHit;
+
     [SerializeField] GameObject formularUI;
     private void Start()
     {
@@ -23,11 +25,7 @@ public class Raycasting : MonoBehaviour
             {
                 if (hit.collider != null)
                 {
-                    formularUI.SetActive(true);
-                    formularUI.GetComponent<PhyisicUI>().SetActiveCube(hit.collider.gameObject);
-                    GameObject player = GameObject.FindGameObjectWithTag("Player");
-                    player.GetComponent<RigidbodyFirstPersonController>().mouseLook.SetCursorLock(false);
-                    Time.timeScale = 0;
+                    onHit.Invoke(hit.collider.gameObject);
                     this.enabled = false;
                 }
             }
