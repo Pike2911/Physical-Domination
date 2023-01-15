@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Physic : MonoBehaviour
+public class Physiccal : MonoBehaviour
 {
     [SerializeField] float u = 0;
     [SerializeField] float v = 0;
