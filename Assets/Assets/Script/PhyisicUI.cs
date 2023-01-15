@@ -12,16 +12,16 @@ public class PhyisicUI : MonoBehaviour
     public void SetActiveCube(GameObject cube)
     {
         activeCube = cube;
-        Physiccal physic = cube.GetComponent<Physiccal>();
+        MyPhysic physic = cube.GetComponent<MyPhysic>();
         textU.text = physic.U.ToString();
     }
     public void Activatecube()
     {
         Debug.Log("Call Func");
-        Physiccal physic = activeCube.GetComponent<Physiccal>();
+        MyPhysic physic = activeCube.GetComponent<MyPhysic>();
         physic.U = float.Parse(textU.text);
 
-        activeCube.GetComponent<Physiccal>().Activephysic();
+        activeCube.GetComponent<MyPhysic>().Activephysic();
         Time.timeScale = 1.0f;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<RigidbodyFirstPersonController>().mouseLook.SetCursorLock(true);

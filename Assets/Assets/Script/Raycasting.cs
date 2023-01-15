@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
-public class Raycaster : MonoBehaviour
+public class Raycasting : MonoBehaviour
 {
     [SerializeField] GameObject formularUI;
     private void Start()
