@@ -8,6 +8,7 @@ public class MyPhysic : MonoBehaviour
     [SerializeField] float v = 0;
     [SerializeField] float t = 0;
     [SerializeField] float s = 0;
+    [SerializeField] float physicT = 0;
 
     public float U { get => u; set => u = value; }
     public float V { get => v; set => v = value; }
@@ -27,14 +28,15 @@ public class MyPhysic : MonoBehaviour
     {
         if (isPhysicActive)
         {
-            T += Time.deltaTime;
-            S = (U + V) / 2.0f * T;
+            physicT += Time.deltaTime;
+            S = (U + V) / 2.0f * physicT;
             Location.x = z + S;
             transform.position = Location;
             Debug.Log(S);
-            if (T >= 5)
+            if (physicT >= T)
             {
-                this.enabled = false;
+                isPhysicActive = false;
+                physicT = 0;
             }
         }
     }

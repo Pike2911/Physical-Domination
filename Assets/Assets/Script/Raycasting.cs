@@ -9,6 +9,7 @@ public class Raycasting : MonoBehaviour
     [SerializeField] GameObject formularUI;
     private void Start()
     {
+        
     }
     void Update()
     {
@@ -26,7 +27,7 @@ public class Raycasting : MonoBehaviour
                 if (hit.collider != null)
                 {
                     onHit.Invoke(hit.collider.gameObject);
-                    this.enabled = false;
+                    
                 }
             }
         }
