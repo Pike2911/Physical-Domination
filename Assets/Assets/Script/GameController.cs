@@ -9,10 +9,13 @@ public class GameController : MonoBehaviour
     [SerializeField] private UnityEvent unPause;
 
     private bool isPause = false;
+
+    public bool IsPause { get => isPause; set => isPause = value; }
+
     public void PauseGame(bool isPause)
     {
         Time.timeScale = isPause ? 0 : 1;
-        this.isPause = isPause;
+        this.IsPause = isPause;
         if (isPause)
         {
              onPause.Invoke();

@@ -13,12 +13,12 @@ public class Raycasting : MonoBehaviour
     }
     void Update()
     {
+        Debug.DrawRay(transform.position, Camera.main.transform.forward * 100, Color.red);
+    }
+    public void Raycas()
+    {
         int layerMask = 1 << 8;
 
-        Debug.DrawRay(transform.position, Camera.main.transform.forward * 100, Color.red);
-
-        if (Input.GetButtonDown("Fire1"))
-        {
             RaycastHit hit;
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
@@ -27,9 +27,8 @@ public class Raycasting : MonoBehaviour
                 if (hit.collider != null)
                 {
                     onHit.Invoke(hit.collider.gameObject);
-                    
+
                 }
             }
-        }
     }
 }
