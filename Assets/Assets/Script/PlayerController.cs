@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LevelManager levelManager;
     public void LockMouse(bool isLock)
     {
-        GetComponent<RigidbodyFirstPersonController>().mouseLook.SetCursorLock(false);
+        GetComponent<RigidbodyFirstPersonController>().mouseLook.SetCursorLock(isLock);
     }
 
     public void Update()

@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class PhyisicUI : MonoBehaviour
 {
     private GameObject activeCube;
+
+    public UnityEvent onDeploy;
 
     [SerializeField] private TMP_InputField textU;
     [SerializeField] private TMP_InputField textV;
@@ -25,20 +28,14 @@ public class PhyisicUI : MonoBehaviour
 
     public void Activatecube()
     {
-        Debug.Log("Call Func");
+        onDeploy.Invoke();
+
         MyPhysic physic = activeCube.GetComponent<MyPhysic>();
         physic.U = float.Parse(textU.text);
         physic.T = float.Parse(textT.text);
 
-        activeCube.GetComponent<MyPhysic>().Activephysic();
+        physic.Activephysic();
 
-        
-        GameController gameController = GameObject.FindGameObjectWithTag("GameController")
-                                                   .GetComponent<GameController>();
-        gameController.PauseGame(false);
-
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<RigidbodyFirstPersonController>().mouseLook.SetCursorLock(true);
         gameObject.SetActive(false);
     }
 }
