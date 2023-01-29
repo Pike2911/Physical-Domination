@@ -40,7 +40,7 @@ public class MyPhysic : MonoBehaviour
             }
         }
     }
-    public void Activephysic()
+    public void ActivePhysic()
     {
         isPhysicActive = true;
     }

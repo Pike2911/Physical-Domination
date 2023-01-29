@@ -26,7 +26,7 @@ public class PhyisicUI : MonoBehaviour
         textS.text = physic.S.ToString();
     }
 
-    public void Activatecube()
+    public void ActivateCube()
     {
         onDeploy.Invoke();
 
@@ -34,7 +34,7 @@ public class PhyisicUI : MonoBehaviour
         physic.U = float.Parse(textU.text);
         physic.T = float.Parse(textT.text);
 
-        physic.Activephysic();
+        physic.ActivePhysic();
 
         gameObject.SetActive(false);
     }
