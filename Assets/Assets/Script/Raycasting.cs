@@ -27,7 +27,6 @@ public class Raycasting : MonoBehaviour
                 if (hit.collider != null)
                 {
                     onHit.Invoke(hit.collider.gameObject);
-
                 }
             }
     }

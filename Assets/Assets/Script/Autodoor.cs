@@ -6,7 +6,7 @@ public class Autodoor : MonoBehaviour
 {
     [SerializeField] GameObject movingDoor;
 
-    private float maximumOpening = 11f;
+    [SerializeField ]private float maximumOpening = 11f;
 
     private float movementSpeed = 5f;
 
