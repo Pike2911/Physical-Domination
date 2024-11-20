@@ -7,9 +7,10 @@ public class Raycasting : MonoBehaviour
     public GameObjectEvent onHit;
 
     [SerializeField] GameObject formularUI;
+    [SerializeField] GameObject Phone;
     private void Start()
     {
-        
+
     }
     void Update()
     {
@@ -19,16 +20,19 @@ public class Raycasting : MonoBehaviour
     {
         int layerMask = 1 << 8;
 
-            RaycastHit hit;
-            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        RaycastHit hit;
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        {
+            if (hit.collider != null)
             {
-                if (hit.collider != null)
+                if (Phone.activeSelf == true)
                 {
                     onHit.Invoke(hit.collider.gameObject);
-
                 }
+
             }
+        }
     }
 }
