@@ -8,6 +8,9 @@ public class Raycasting : MonoBehaviour
 
     [SerializeField] GameObject formularUI;
     [SerializeField] GameObject Phone;
+
+    private int Power = 3;
+
     private void Start()
     {
 
@@ -29,10 +32,15 @@ public class Raycasting : MonoBehaviour
             {
                 if (Phone.activeSelf == true)
                 {
+                    Power -= 1;
                     onHit.Invoke(hit.collider.gameObject);
                 }
 
             }
         }
+    }
+    public int GetPower()
+    {
+        return Power;
     }
 }

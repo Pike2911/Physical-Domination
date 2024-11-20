@@ -32,7 +32,7 @@ public class MyPhysic : MonoBehaviour
             S = (U + V) / 2.0f * physicT;
             Location.x = z + S;
             transform.position = Location;
-            Debug.Log(S);
+            //Debug.Log(S);
             if (physicT >= T)
             {
                 isPhysicActive = false;

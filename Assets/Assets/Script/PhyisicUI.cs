@@ -28,7 +28,7 @@ public class PhyisicUI : MonoBehaviour
 
     public void ActivateCube()
     {
-        Debug.Log("Call Func");
+        //Debug.Log("Call Func");
         onDeploy.Invoke();
 
         MyPhysic physic = activeCube.GetComponent<MyPhysic>();

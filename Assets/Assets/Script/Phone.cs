@@ -5,6 +5,7 @@ using UnityEngine;
 public class Phone : MonoBehaviour
 {
     [SerializeField] private GameObject phone;
+    [SerializeField] private Raycasting raycasting;
 
     private void Start()
     {
@@ -12,18 +13,25 @@ public class Phone : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("OpenPhone"))
+        int currentPower = raycasting.GetPower();
+
+        if(currentPower != 0)
         {
-            if (phone.activeSelf != true)
+            if (Input.GetButtonDown("OpenPhone"))
             {
+                if (phone.activeSelf != true)
+                {
                     phone.SetActive(true);
-            }
-            else
-            {
+                }
+                else
+                {
                     phone.SetActive(false);
+                }
             }
         }
-        
-        
+        else if(currentPower == 0)
+        {
+            phone.SetActive(false);
+        }
     }
 }
